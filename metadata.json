@@ -1,0 +1,6 @@
+{
+  "name": "Math AI Playground and Dataset Constructor",
+  "description": "An interactive, client-side neural network and dataset editor where users build datasets, configure activation functions, train real math-based models, and export trained models as ready-to-run HTML.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

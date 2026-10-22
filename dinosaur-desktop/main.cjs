@@ -9,7 +9,7 @@ function createWindow() {
     webPreferences: { contextIsolation: true, nodeIntegration: false, sandbox: true }
   });
   Menu.setApplicationMenu(null);
-  win.loadFile(path.join(__dirname, '..', 'dinosaur.html'));
+  win.loadFile(path.join(__dirname, 'dinosaur.html'));
 }
 app.whenReady().then(() => {
   createWindow();

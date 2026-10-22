@@ -22,6 +22,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
+      - name: Copy game into desktop package
+        working-directory: dinosaur-desktop
+        run: Copy-Item ../dinosaur.html ./dinosaur.html
       - name: Install dependencies
         working-directory: dinosaur-desktop
         run: npm install

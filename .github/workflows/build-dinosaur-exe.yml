@@ -1,0 +1,45 @@
+name: Build Dinosaur.exe
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'dinosaur.html'
+      - 'dinosaur-desktop/**'
+      - '.github/workflows/build-dinosaur-exe.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install dependencies
+        working-directory: dinosaur-desktop
+        run: npm install
+      - name: Build portable Windows executable
+        working-directory: dinosaur-desktop
+        run: npm run dist
+      - name: Upload executable artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Dinosaur.exe
+          path: dinosaur-desktop/dist/Dinosaur.exe
+          if-no-files-found: error
+          retention-days: 30
+      - name: Publish downloadable GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: dinosaur-exe-v1.0.${{ github.run_number }}
+          name: Dinosaur.exe v1.0.${{ github.run_number }}
+          body: "Portable Windows x64 build of Dinosaur.exe. Download Dinosaur.exe and run it on Windows."
+          files: dinosaur-desktop/dist/Dinosaur.exe
+          make_latest: true

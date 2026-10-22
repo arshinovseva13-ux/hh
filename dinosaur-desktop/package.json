@@ -21,13 +21,7 @@
     },
     "files": [
       "main.cjs",
-      "../dinosaur.html"
-    ],
-    "extraFiles": [
-      {
-        "from": "../dinosaur.html",
-        "to": "dinosaur.html"
-      }
+      "dinosaur.html"
     ],
     "win": {
       "target": [

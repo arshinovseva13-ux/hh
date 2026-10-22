@@ -1,0 +1,47 @@
+{
+  "name": "dinosaur-exe",
+  "version": "1.0.0",
+  "description": "Dinosaur.exe - neon endless runner",
+  "main": "main.cjs",
+  "author": "Seva",
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win portable"
+  },
+  "devDependencies": {
+    "electron": "^33.2.1",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "com.dinosaur.exe",
+    "productName": "Dinosaur",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.cjs",
+      "../dinosaur.html"
+    ],
+    "extraFiles": [
+      {
+        "from": "../dinosaur.html",
+        "to": "dinosaur.html"
+      }
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "artifactName": "Dinosaur.exe"
+    },
+    "portable": {
+      "artifactName": "Dinosaur.exe"
+    }
+  }
+}

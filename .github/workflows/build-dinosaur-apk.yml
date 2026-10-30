@@ -1,0 +1,51 @@
+name: Build Dinosaur Android APK
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'dinosaur.html'
+      - 'android-app/**'
+      - '.github/workflows/build-dinosaur-apk.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.9'
+
+      - name: Prepare game assets
+        run: |
+          mkdir -p android-app/app/src/main/assets
+          cp dinosaur.html android-app/app/src/main/assets/index.html
+
+      - name: Build APK
+        working-directory: android-app
+        run: gradle --no-daemon :app:assembleDebug
+
+      - name: Rename APK
+        run: cp android-app/app/build/outputs/apk/debug/app-debug.apk Dinosaur.apk
+
+      - name: Attach APK to Dinosaur.exe release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: dinosaur-exe-v1.0.4
+          name: Dinosaur.exe v1.0.4
+          files: Dinosaur.apk
+          fail_on_unmatched_files: true

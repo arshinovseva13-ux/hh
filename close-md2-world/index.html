@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#090b16">
+<title>Close &amp; MD2 World — пространство проектов</title>
+<style>
+:root{color-scheme:dark;--bg:#080a14;--panel:rgba(19,23,42,.76);--line:rgba(161,174,255,.16);--muted:#a4abc5;--text:#f4f5ff;--violet:#a78bfa;--cyan:#67e8f9}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 12% 8%,rgba(93,75,190,.25),transparent 34%),radial-gradient(ellipse at 90% 22%,rgba(20,151,180,.16),transparent 30%),var(--bg);color:var(--text);font:15px/1.6 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;min-height:100vh}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.22;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:48px 48px;mask-image:linear-gradient(to bottom,black,transparent 85%)}
+a{color:inherit;text-decoration:none}.wrap{width:min(1120px,calc(100% - 40px));margin:auto;position:relative}.top{display:flex;align-items:center;justify-content:space-between;padding:24px 0;border-bottom:1px solid var(--line)}.brand{display:flex;gap:12px;align-items:center;font-weight:750;letter-spacing:-.03em}.mark{width:38px;height:38px;border-radius:13px;display:grid;place-items:center;background:linear-gradient(135deg,#8b5cf6,#22d3ee);color:#07111b;font-weight:900;box-shadow:0 8px 30px #7657dc55}.brand small{display:block;color:var(--muted);font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase}.nav{display:flex;gap:24px;color:var(--muted);font-size:13px}.nav a:hover{color:white}.hero{padding:100px 0 82px;max-width:850px}.eyebrow{display:inline-flex;align-items:center;gap:9px;padding:7px 12px;border:1px solid var(--line);border-radius:99px;color:#c9c3ff;background:#a78bfa12;font-size:12px;letter-spacing:.08em;text-transform:uppercase}.pulse{width:7px;height:7px;border-radius:50%;background:#67e8f9;box-shadow:0 0 14px #67e8f9}.hero h1{font-size:clamp(46px,8vw,88px);line-height:.99;letter-spacing:-.075em;margin:25px 0 20px;font-weight:800}.hero h1 span{background:linear-gradient(100deg,#c4b5fd 8%,#67e8f9 88%);-webkit-background-clip:text;background-clip:text;color:transparent}.lead{max-width:640px;color:#b8bfd7;font-size:clamp(16px,2vw,19px);margin:0 0 30px}.actions{display:flex;gap:12px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;gap:10px;padding:12px 17px;border-radius:12px;border:1px solid var(--line);font-weight:650;font-size:13px;transition:.2s}.btn.primary{background:linear-gradient(110deg,#8b5cf6,#22b8cf);color:#07111b;border:0;box-shadow:0 10px 32px #7657dc35}.btn:hover{transform:translateY(-2px);filter:brightness(1.12)}.section{padding:35px 0 70px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:22px}.kicker{color:#9c8cff;text-transform:uppercase;font-size:11px;letter-spacing:.16em;font-weight:700}.section h2{font-size:clamp(25px,4vw,36px);letter-spacing:-.045em;margin:5px 0 0}.section-head p{color:var(--muted);font-size:13px;margin:0}.project{display:grid;grid-template-columns:1.15fr .85fr;overflow:hidden;border:1px solid rgba(167,139,250,.28);border-radius:24px;background:linear-gradient(130deg,rgba(26,29,54,.92),rgba(12,25,39,.88));box-shadow:0 24px 80px #0005}.project-main{padding:34px}.project-tag{font-size:11px;color:#a5f3fc;letter-spacing:.14em;text-transform:uppercase;font-weight:750}.project h3{font-size:clamp(26px,4vw,40px);line-height:1.1;letter-spacing:-.05em;margin:13px 0}.project p{color:#b3bad2;max-width:520px}.project-art{min-height:290px;display:grid;place-items:center;position:relative;overflow:hidden;background:radial-gradient(circle at 50% 50%,#7556d94c,transparent 58%),linear-gradient(145deg,#171d38,#0c2732)}.orb{width:175px;height:175px;border-radius:50%;border:1px solid #b8a8ff77;box-shadow:inset 0 0 45px #8b5cf644,0 0 75px #22d3ee30;display:grid;place-items:center;position:relative}.orb:before,.orb:after{content:"";position:absolute;inset:-22px;border:1px solid #67e8f944;border-radius:50%;transform:rotateX(68deg) rotateZ(25deg)}.orb:after{inset:-42px;transform:rotateX(68deg) rotateZ(-35deg);border-color:#a78bfa55}.orb span{font-size:40px;font-weight:900;letter-spacing:-.1em;background:linear-gradient(120deg,#c4b5fd,#67e8f9);background-clip:text;color:transparent}.meta{display:flex;gap:9px;flex-wrap:wrap;margin:22px 0}.pill{border:1px solid var(--line);border-radius:99px;padding:5px 10px;color:#c6cbe0;font-size:11px}.project .btn{margin-top:6px}.history{display:grid;grid-template-columns:180px 1fr;gap:24px;padding:25px 0;border-top:1px solid var(--line)}.history time{color:#8f97b6;font-size:12px}.history strong{display:block;margin-bottom:4px}.history p{margin:0;color:var(--muted);font-size:13px}.empty-note{color:var(--muted);font-size:13px}.footer{border-top:1px solid var(--line);padding:24px 0 34px;color:#7f87a5;font-size:12px;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+@media(max-width:700px){.wrap{width:min(100% - 28px,1120px)}.top{padding:17px 0}.nav{gap:12px;font-size:12px}.hero{padding:76px 0 60px}.project{grid-template-columns:1fr}.project-art{min-height:210px;grid-row:1}.project-main{padding:25px}.section-head{align-items:start;flex-direction:column}.history{grid-template-columns:1fr;gap:5px;padding:19px 0}.footer{flex-direction:column}}@media(max-width:420px){.nav a:nth-child(2){display:none}.hero h1{font-size:48px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+<a class="brand" href="#home"><span class="mark">C×M</span><span>Close &amp; MD2 World<small>Independent project hub</small></span></a>
+<nav class="nav" aria-label="Навигация"><a href="#projects">Проекты</a><a href="#about">О хабе</a><a href="#history">История</a></nav>
+</header>
+<main id="home">
+<section class="hero">
+<div class="eyebrow"><span class="pulse"></span> Общее пространство проектов</div>
+<h1>Идеи становятся<br><span>реальностью.</span></h1>
+<p class="lead">Close &amp; MD2 World — отдельная площадка для проектов, экспериментов и совместной разработки. Здесь собраны работы, которые создаются на пересечении технологий и воображения.</p>
+<div class="actions"><a class="btn primary" href="#projects">Исследовать проекты <span aria-hidden="true">↗</span></a><a class="btn" href="#about">О проекте ↓</a></div>
+</section>
+<section class="section" id="projects">
+<div class="section-head"><div><div class="kicker">01 / Коллекция</div><h2>Совместные проекты</h2></div><p>Один проект. Одна общая работа.</p></div>
+<article class="project">
+<div class="project-main">
+<div class="project-tag">Совместная разработка · 01</div>
+<h3>Video Studio</h3>
+<p>Браузерная студия для создания и редактирования видео. Рабочее пространство с инструментами монтажа, эффектами и управлением проектом.</p>
+<div class="meta"><span class="pill">Web app</span><span class="pill">Видео и монтаж</span><span class="pill">Совместный проект</span></div>
+<a class="btn primary" href="https://arshinovseva13-ux.github.io/bbb/video-studio/" target="_blank" rel="noopener noreferrer">Открыть Video Studio ↗</a>
+</div>
+<div class="project-art" aria-hidden="true"><div class="orb"><span>VS</span></div></div>
+</article>
+</section>
+<section class="section" id="about">
+<div class="section-head"><div><div class="kicker">02 / Концепция</div><h2>Два мира. Общее пространство.</h2></div></div>
+<p class="lead">Хаб развивается независимо от других сайтов и каталогов. В нём публикуются только проекты, которые действительно относятся к этому пространству. Новые направления появятся здесь после отдельного решения.</p>
+</section>
+<section class="section" id="history">
+<div class="section-head"><div><div class="kicker">03 / Журнал</div><h2>История обновлений</h2></div></div>
+<div class="history"><time datetime="2026-10-30">30 октября 2026</time><div><strong>Создан Close &amp; MD2 World</strong><p>Добавлена отдельная страница хаба и первый элемент раздела «Совместные проекты» — Video Studio.</p></div></div>
+</section>
+</main>
+<footer class="footer"><span>© 2026 Close &amp; MD2 World</span><span>Отдельный проект · Не связан с каталогом Close Приложения</span></footer>
+</div>
+</body>
+</html>
